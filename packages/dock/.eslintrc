@@ -1,0 +1,28 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "import",
+    "jest",
+    "promise"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:promise/recommended"
+  ],
+  "rules": {
+    "jest/no-focused-tests": 2,
+    "jest/no-identical-title": 2
+  },
+  "globals": {
+    "Promise": true,
+    "Symbol": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "lims-apps-connectors-wrapper",
+  "version": "0.1.0",
+  "description": "Monorepo for the LIMS Connectors",
+  "private": true,
+  "engines": {
+    "node": ">=6.11.5",
+    "yarn": ">=1.0.0"
+  },
+  "scripts": {
+    "dev": "lerna run --parallel --scope @lims.io/* dev",
+    "prepare": "lerna run --scope @lims.io/* prepare"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^2.11.0"
+  }
+}
