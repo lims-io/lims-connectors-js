@@ -4,7 +4,6 @@ import ControlPanel from './ControlPanel';
 import createReactComponent from './driver/react';
 
 export {
+    ControlPanel,
     createReactComponent
 };
-
-export default ControlPanel;
