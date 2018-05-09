@@ -4,7 +4,6 @@ import Dock from './Dock';
 import createReactComponent from './driver/react';
 
 export {
+    Dock,
     createReactComponent
 };
-
-export default Dock;
