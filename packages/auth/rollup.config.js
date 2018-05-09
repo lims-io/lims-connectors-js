@@ -35,7 +35,7 @@ export default {
         },
         // {
         //     file: 'dist/index.min.js',
-        //     name: 'LimsDock',
+        //     name: 'LimsAuth',
         //     format: 'iife',
         //     sourcemap: true
         // }

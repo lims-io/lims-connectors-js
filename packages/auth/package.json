@@ -1,12 +1,12 @@
 {
-  "name": "@lims.io/connector-dock",
-  "version": "0.5.0",
-  "description": "Connector for LIMS Dock",
+  "name": "@lims.io/connector-auth",
+  "version": "0.1.0",
+  "description": "Connector for LIMS Auth",
   "author": "LIMS <support@lims.io> (https://lims.io)",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lims-io/lims-connectors-js/tree/master/packages/dock"
+    "url": "https://github.com/lims-io/lims-connectors-js/tree/master/packages/auth"
   },
   "bugs": {
     "url": "https://github.com/lims-io/lims-connectors-js/issues"
@@ -14,7 +14,7 @@
   "keywords": [
     "lims",
     "connector",
-    "dock"
+    "auth"
   ],
   "files": [
     "dist",

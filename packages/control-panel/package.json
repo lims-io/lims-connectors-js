@@ -36,7 +36,7 @@
     "prepare": "yarn build"
   },
   "dependencies": {
-    "xcomponent": "^6.0.49"
+    "xcomponent": "^6.0.60"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -53,6 +53,7 @@
     "rollup": "^0.58.2",
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-eslint": "^4.0.0",
     "rollup-plugin-node-resolve": "^3.3.0"
   }
 }

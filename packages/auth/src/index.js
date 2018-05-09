@@ -1,9 +1,9 @@
-// Control Panel
-import ControlPanel from './ControlPanel';
+// Auth
+import Auth from './Auth';
 // Drivers
 import createReactComponent from './driver/react';
 
 export {
-    ControlPanel,
+    Auth,
     createReactComponent
 };
