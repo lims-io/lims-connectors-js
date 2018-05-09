@@ -33,12 +33,12 @@ export default {
             file: pkg.module,
             format: 'es'
         },
-        {
-            file: 'dist/index.min.js',
-            name: 'LimsAuth',
-            format: 'iife',
-            sourcemap: true
-        }
+        // {
+        //     file: 'dist/index.min.js',
+        //     name: 'LimsAuth',
+        //     format: 'iife',
+        //     sourcemap: true
+        // }
     ],
     plugins,
     external
