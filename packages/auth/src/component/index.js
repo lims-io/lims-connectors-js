@@ -38,6 +38,9 @@ const create = (identifier, url, spinner, logLevel) => {
                 height: '100%'
             },
 
+            // Enable viewport scrolling
+            scrolling: true,
+
             // The url that will be loaded in the iframe
             url,
 
