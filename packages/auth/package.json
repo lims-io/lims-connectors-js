@@ -1,6 +1,6 @@
 {
   "name": "@lims.io/connector-auth",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Connector for LIMS Auth",
   "author": "LIMS <support@lims.io> (https://lims.io)",
   "license": "Apache-2.0",
