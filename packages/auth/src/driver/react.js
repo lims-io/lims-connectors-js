@@ -15,7 +15,8 @@ const createReactComponent = (React, ReactDOM) => {
                 logLevel = 'error',
                 spinner = true,
                 url,
-                onLoad
+                onLoad,
+                onAuthenticated,
             } = this.props;
 
             // Get the node that will be used as a container
@@ -26,7 +27,8 @@ const createReactComponent = (React, ReactDOM) => {
                 connector,
                 spinner,
                 logLevel,
-                onLoad
+                onLoad,
+                onAuthenticated,
             });
 
             this.setState({auth});

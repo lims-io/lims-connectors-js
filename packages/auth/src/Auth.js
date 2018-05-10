@@ -13,12 +13,14 @@ class Auth {
      * @param spinner Set to `true` if the loading spinner should be shown
      * @param logLevel Level of logging [error | debug | info | warn]
      * @param onLoad
+     * @param onAuthenticated
      */
     constructor(element, url, {
         connector = 'unknown',
         spinner = true,
         logLevel = 'error',
-        onLoad
+        onLoad,
+        onAuthenticated,
     } = {}) {
         // Create component
         const component = create('lims-auth', url, spinner, logLevel);
@@ -29,11 +31,19 @@ class Auth {
              */
             connector,
             /**
-             * Called when the xcomponent content has loaded and is ready to be displayed.
+             * Called when the component has loaded and is ready to be displayed.
              */
             onLoad() {
                 if (isFunction(onLoad)) {
                     onLoad();
+                }
+            },
+            /**
+             * Called when the user is authenticated
+             */
+            onAuthenticated(user) {
+                if (isFunction(onAuthenticated)) {
+                    onAuthenticated(user);
                 }
             }
         });
