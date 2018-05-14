@@ -17,6 +17,7 @@ const createReactComponent = (React, ReactDOM) => {
                 url,
                 onLoad,
                 onAuthenticated,
+                onSignOut,
             } = this.props;
 
             // Get the node that will be used as a container
@@ -29,6 +30,7 @@ const createReactComponent = (React, ReactDOM) => {
                 logLevel,
                 onLoad,
                 onAuthenticated,
+                onSignOut,
             });
 
             this.setState({auth});
