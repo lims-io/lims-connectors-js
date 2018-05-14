@@ -14,6 +14,7 @@ class Auth {
      * @param logLevel Level of logging [error | debug | info | warn]
      * @param onLoad
      * @param onAuthenticated
+     * @param onSignOut
      */
     constructor(element, url, {
         connector = 'unknown',
@@ -21,6 +22,7 @@ class Auth {
         logLevel = 'error',
         onLoad,
         onAuthenticated,
+        onSignOut,
     } = {}) {
         // Create component
         const component = create('lims-auth', url, spinner, logLevel);
@@ -44,6 +46,14 @@ class Auth {
             onAuthenticated(user) {
                 if (isFunction(onAuthenticated)) {
                     onAuthenticated(user);
+                }
+            },
+            /**
+             * Called when the user is signed out
+             */
+            onSignOut() {
+                if (isFunction(onSignOut)) {
+                    onSignOut();
                 }
             }
         });
