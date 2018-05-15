@@ -15,8 +15,10 @@ const createReactComponent = (React, ReactDOM) => {
                 logLevel = 'error',
                 spinner = true,
                 url,
+                customToken,
                 onLoad,
-                onAuthenticated,
+                onAuthSuccess,
+                onAuthError,
                 onSignOut,
             } = this.props;
 
@@ -26,10 +28,12 @@ const createReactComponent = (React, ReactDOM) => {
             // Create auth connector instance
             const auth = new Auth(node, url, {
                 connector,
+                customToken,
                 spinner,
                 logLevel,
                 onLoad,
-                onAuthenticated,
+                onAuthSuccess,
+                onAuthError,
                 onSignOut,
             });
 

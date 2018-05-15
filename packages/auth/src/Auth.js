@@ -12,6 +12,7 @@ class Auth {
      * @param connector Defines name of the connector
      * @param spinner Set to `true` if the loading spinner should be shown
      * @param logLevel Level of logging [error | debug | info | warn]
+     * @param customToken
      * @param onLoad
      * @param onAuthenticated
      * @param onSignOut
@@ -20,8 +21,10 @@ class Auth {
         connector = 'unknown',
         spinner = true,
         logLevel = 'error',
+        customToken,
         onLoad,
-        onAuthenticated,
+        onAuthSuccess,
+        onAuthError,
         onSignOut,
     } = {}) {
         // Create component
@@ -33,6 +36,10 @@ class Auth {
              */
             connector,
             /**
+             * Custom token
+             */
+            customToken,
+            /**
              * Called when the component has loaded and is ready to be displayed.
              */
             onLoad() {
@@ -41,11 +48,19 @@ class Auth {
                 }
             },
             /**
-             * Called when the user is authenticated
+             * Called when the user is successfully authenticated
              */
-            onAuthenticated(user) {
-                if (isFunction(onAuthenticated)) {
-                    onAuthenticated(user);
+            onAuthSuccess(user) {
+                if (isFunction(onAuthSuccess)) {
+                    onAuthSuccess(user);
+                }
+            },
+            /**
+             * Called when the authentication fails
+             */
+            onAuthError(error) {
+                if (isFunction(onAuthError)) {
+                    onAuthError(error);
                 }
             },
             /**
