@@ -16,6 +16,7 @@ const createReactComponent = (React, ReactDOM) => {
                 spinner = true,
                 url,
                 customToken,
+                verifyEmailUrl,
                 onLoad,
                 onAuthSuccess,
                 onAuthError,
@@ -29,6 +30,7 @@ const createReactComponent = (React, ReactDOM) => {
             const auth = new Auth(node, url, {
                 connector,
                 customToken,
+                verifyEmailUrl,
                 spinner,
                 logLevel,
                 onLoad,

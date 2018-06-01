@@ -12,7 +12,8 @@ class Auth {
      * @param connector Defines name of the connector
      * @param spinner Set to `true` if the loading spinner should be shown
      * @param logLevel Level of logging [error | debug | info | warn]
-     * @param customToken
+     * @param customToken If set the Auth will try to sign in with the token
+     * @param verifyEmailUrl Redirect url after email verification
      * @param onLoad
      * @param onAuthenticated
      * @param onSignOut
@@ -22,6 +23,7 @@ class Auth {
         spinner = true,
         logLevel = 'error',
         customToken,
+        verifyEmailUrl,
         onLoad,
         onAuthSuccess,
         onAuthError,
@@ -31,41 +33,24 @@ class Auth {
         const component = create('lims-auth', url, spinner, logLevel);
         // Render component
         render(component, element, {
-            /**
-             * Connector name
-             */
             connector,
-            /**
-             * Custom token
-             */
             customToken,
-            /**
-             * Called when the component has loaded and is ready to be displayed.
-             */
+            verifyEmailUrl,
             onLoad() {
                 if (isFunction(onLoad)) {
                     onLoad();
                 }
             },
-            /**
-             * Called when the user is successfully authenticated
-             */
             onAuthSuccess(user) {
                 if (isFunction(onAuthSuccess)) {
                     onAuthSuccess(user);
                 }
             },
-            /**
-             * Called when the authentication fails
-             */
             onAuthError(error) {
                 if (isFunction(onAuthError)) {
                     onAuthError(error);
                 }
             },
-            /**
-             * Called when the user is signed out
-             */
             onSignOut() {
                 if (isFunction(onSignOut)) {
                     onSignOut();
